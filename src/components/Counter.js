@@ -46,6 +46,7 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
+import { func } from 'prop-types';
 import React from 'react'; /* STEP 0 */
 
 export default function Counter() {
@@ -64,8 +65,15 @@ export default function Counter() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
-  };
+    //color: 'royalblue', /* STEP 2 */
+    color: function() {
+      if (count % 2 === 0) {
+        `royalblue`
+      } else {
+        `crimson`
+      }
+     }
+    };
 
   return (
     <div className='widget-counter container'>
