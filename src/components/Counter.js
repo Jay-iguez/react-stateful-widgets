@@ -47,7 +47,7 @@ STEP 6:
 */
 
 import { func } from 'prop-types';
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Counter() {
   const [count, setCount] = useState(0)
@@ -67,13 +67,9 @@ export default function Counter() {
     marginBottom: '0.3em',
     //color: 'royalblue', /* STEP 2 */
     color: function() {
-      if (count % 2 === 0) {
-        `royalblue`
-      } else {
-        `crimson`
-      }
-     }
-    };
+      count % 2 === 0 ? 'royalblue' : 'crimson'
+    }
+  }
 
   return (
     <div className='widget-counter container'>
