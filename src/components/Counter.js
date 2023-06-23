@@ -69,7 +69,6 @@ export default function Counter() {
     color:
       (count % 2 == 0 ? 'royalblue' : 'crimson')
   }
-  console.log(style.color)
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
