@@ -36,7 +36,7 @@ export default function Squares() {
     if (id === activeSquare){
       return 'active'
     } else {
-      return
+      return ""
     }
     
   };
